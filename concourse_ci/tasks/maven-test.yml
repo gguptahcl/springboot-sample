@@ -10,14 +10,19 @@ image_resource:
 inputs:
   - name: spring-boot-sample
 
-run:
-  path: "mvn"
-  args:
-    - -f
-    - spring-boot-sample/pom.xml
-    - clean
-    - test
+#run:
+#  path: "mvn"
+#  args:
+#    - -f
+#    - spring-boot-sample/pom.xml
+#    - clean
+#    - test
 
-#outputs:
-#  - name: spring-boot-sample-unit-test-output
-#    path: spring-boot-sample
+run:
+  path: /bin/sh
+  args: ["spring-boot-sample/concourse_ci/tasks/maventest.sh"]
+  
+  
+outputs:
+  - name: spring-boot-sample-unit-test-output
+#   path: spring-boot-sample
