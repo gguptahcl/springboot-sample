@@ -3,7 +3,7 @@
 set -e
 
 echo "Starting unit tests...."
-cd spring-boot-service
+cd spring-boot-sample
 
 
 ls -lt

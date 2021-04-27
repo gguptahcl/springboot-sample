@@ -5,9 +5,9 @@ image_resource:
  type: docker-image
  source: {repository: java, tag: openjdk-8}
 inputs:
- - name: spring-boot-service
+ - name: spring-boot-sample
 
 run:
-  #path: spring-boot-service/concourse_ci/tasks/sonarscan.sh
+  #path: spring-boot-sample/concourse_ci/tasks/sonarscan.sh
   path: /bin/sh
-  args: ["spring-boot-service/concourse_ci/tasks/unittest.sh"]
+  args: ["spring-boot-sample/concourse_ci/tasks/unittest.sh"]

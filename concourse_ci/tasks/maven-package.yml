@@ -8,16 +8,16 @@ image_resource:
     tag: 3.6.0-jdk-8-alpine
 
 inputs:
-  - name: spring-boot-service
+  - name: spring-boot-sample
 
 run:
   path: "mvn"
   args:
     - -f
-    - spring-boot-service/pom.xml
+    - spring-boot-sample/pom.xml
     - clean
     - package
     
 outputs:
-  - name: spring-boot-service-out
-    path: spring-boot-service
+  - name: spring-boot-sample-out
+    path: spring-boot-sample

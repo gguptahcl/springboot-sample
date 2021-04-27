@@ -6,14 +6,14 @@ image_resource:
   source: {repository: java, tag: alpine}
 
 inputs:
-  - name: spring-boot-service
+  - name: spring-boot-sample
 
 outputs:
   - name: sonar-scan-output
 
 run:
-  #path: spring-boot-service/concourse_ci/tasks/sonarscan.sh
+  #path: spring-boot-sample/concourse_ci/tasks/sonarscan.sh
   path: /bin/sh
-  args: ["spring-boot-service/concourse_ci/tasks/sonarscan.sh"]
+  args: ["spring-boot-sample/concourse_ci/tasks/sonarscan.sh"]
   
   

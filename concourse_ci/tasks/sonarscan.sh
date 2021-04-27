@@ -8,7 +8,7 @@ echo " .. Running build..."
 echo "git url is... "
 echo "${git_repo_url}"
 echo "$(pwd)"
-cd spring-boot-service
+cd spring-boot-sample
 dir=$(pwd -P)
 echo "The directory is "
 echo $dir
