@@ -8,7 +8,7 @@ resources:
       branch: master
 
 jobs:
-  - name: test
+  - name: unit-tests
     public: true
     plan:
       - get: spring-boot-sample
@@ -16,24 +16,26 @@ jobs:
       - task: mvn-test
         file: "spring-boot-sample/concourse_ci/tasks/maven-test.yml"
 
-  - name: unit-tests
-    public: true
-    plan:
-     - get: spring-boot-sample
-       passed:
-         - test
-       trigger: true
-     - task: unit-testing
-       file: spring-boot-sample/concourse_ci/tasks/unittest.yml
-       
+     
   - name: sonar-scan
     public: true
     plan:
     - get: spring-boot-sample
       passed:
-        - test
+        - unit-tests
       trigger: true
     - task: code-scan
       file: spring-boot-sample/concourse_ci/tasks/sonarscan.yml
       params:
        login: ((sonarqube-login))
+       
+  - name: package
+    public: true
+    plan:
+    - get: spring-boot-sample
+      passed:
+        - sonar-scan
+      trigger: true
+    - task: package
+      file: spring-boot-sample/concourse_ci/tasks/maven-package.yml
+ 

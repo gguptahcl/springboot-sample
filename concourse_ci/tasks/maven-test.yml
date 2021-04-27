@@ -17,3 +17,7 @@ run:
     - spring-boot-sample/pom.xml
     - clean
     - test
+
+outputs:
+  - name: spring-boot-sample-unit-test-output
+    path: spring-boot-sample/target/test-results    

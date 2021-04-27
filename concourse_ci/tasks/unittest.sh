@@ -5,7 +5,6 @@ set -e
 echo "Starting unit tests...."
 cd spring-boot-sample
 
-
 ls -lt
 chmod +x concourse_ci/tasks/unittest.sh
 chmod +x ./mvnw

@@ -20,3 +20,16 @@
 		fly -t springboot-sample unpause-pipeline -p spring-boot-sample
 		
 		http://localhost:8080
+		
+		
+		
+CI PIpeline 
+
+run unit test 
+pass unit test result to SOnar 
+run package only if sonar qg pass
+commit docker image 
+
+store sonar credentials in properties files
+
+		
