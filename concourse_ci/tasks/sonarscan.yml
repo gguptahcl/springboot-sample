@@ -6,7 +6,7 @@ image_resource:
   source: {repository: java, tag: alpine}
 
 inputs:
-  - name: spring-boot-sample
+# - name: spring-boot-sample
   - name: spring-boot-sample-unit-test-output
 
 outputs:
