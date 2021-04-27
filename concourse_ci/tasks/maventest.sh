@@ -18,4 +18,5 @@ echo "$(pwd)"
 
 cp -R target/test spring-boot-sample-unit-test-output
 
+echo "Present working director yat the end -----------...."
 ls -lt
