@@ -18,3 +18,5 @@ echo "$(pwd)"
 
 
 cp -R target/test spring-boot-sample-unit-test-output
+
+ls -lt
