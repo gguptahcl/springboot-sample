@@ -16,7 +16,7 @@
 		cd C:\java_learning\spring_ms\28mins-workspace\springboot-sample
 		
 		fly -t springboot-sample login -c http://localhost:8080 -u admin -p admin
-		fly -t springboot-sample set-pipeline -p spring-boot-service -c concourse_ci/pipeline.yml -l concourse_ci/config.yml
-		fly -t springboot-sample unpause-pipeline -p spring-boot-service
+		fly -t springboot-sample set-pipeline -p spring-boot-sample -c concourse_ci/pipeline.yml -l concourse_ci/config.yml
+		fly -t springboot-sample unpause-pipeline -p spring-boot-sample
 		
 		http://localhost:8080
