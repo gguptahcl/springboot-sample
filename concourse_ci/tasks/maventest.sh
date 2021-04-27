@@ -16,7 +16,8 @@ echo "$(pwd)"
 
 #./mvnw clean test --s settings.xml
 
-cp -R target/test spring-boot-sample-unit-test-output
-
 echo "Present working director yat the end -----------...."
+
 ls -lt
+
+cp -R target/test spring-boot-sample-unit-test-output
