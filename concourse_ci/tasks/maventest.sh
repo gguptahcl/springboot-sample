@@ -24,4 +24,4 @@ cd target
 
 ls -lt 
 
-cp -R target/test spring-boot-sample-unit-test-output
+cp -R target/test-results/test spring-boot-sample-unit-test-output
