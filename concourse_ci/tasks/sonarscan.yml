@@ -7,7 +7,6 @@ image_resource:
 
 inputs:
   - name: spring-boot-sample
-  - name: spring-boot-sample-unit-test-output
 
 outputs:
   - name: sonar-scan-output

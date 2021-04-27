@@ -15,15 +15,9 @@ run:
   args:
     - -f
     - spring-boot-sample/pom.xml
-#   - clean
+    - clean
     - test
 
 outputs:
   - name: spring-boot-sample-unit-test-output
-run:
-    path: /bin/sh
-    args:
-      - -cx
-      - |
-        ls -lah
-        ["spring-boot-sample/concourse_ci/tasks/copy_unit_test.sh"]
+    path: spring-boot-sample
