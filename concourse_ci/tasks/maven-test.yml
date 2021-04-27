@@ -20,7 +20,10 @@ run:
 
 outputs:
   - name: spring-boot-sample-unit-test-output
-    path: spring-boot-sample/target/test-results
-    
-run:
-    path: spring-boot-sample/concourse_ci/tasks/copy_unit_test.sh   
+    run:
+        path: /bin/sh
+        args:
+          - -cx
+          - |
+            ls -lah
+            ["spring-boot-sample/concourse_ci/tasks/copy_unit_test.sh"]
