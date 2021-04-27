@@ -28,5 +28,11 @@ cd test-results
 
 ls 
 
-cd spring-boot-sample
+echo "Present working directory is...."
+echo "$(pwd)"
+
+cd ../../
+echo "Present working directory is...."
+echo "$(pwd)"
+
 cp -R target/test-results/test spring-boot-sample-unit-test-output
