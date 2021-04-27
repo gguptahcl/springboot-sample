@@ -15,4 +15,12 @@ class SampleBusinessImplTest {
 		assertEquals(expectedResult, actualResult);
 	}
 
+	@Test
+	void calculateSumOfNumbersWithEmptyArray_test() {
+		SampleBusinessImpl sampleBusinessImpl = new SampleBusinessImpl();
+		
+		int actualResult = sampleBusinessImpl.calculateSumOfNumbers(new int [] {});
+		int expectedResult = 0;
+		assertEquals(expectedResult, actualResult);
+	}
 }
