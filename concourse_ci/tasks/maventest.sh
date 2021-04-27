@@ -32,7 +32,15 @@ echo "Present working directory is...."
 echo "$(pwd)"
 
 cd ../../
-echo "Present working directory is...."
+echo "Present working directory is.4..."
 echo "$(pwd)"
 
-cp -R target/test-results/test spring-boot-sample-unit-test-output
+cp -R target spring-boot-sample-unit-test-output
+
+ls -lt
+
+echo "Present working directory is.5..."
+echo "$(pwd)"
+
+cd ../
+ls -lt 
