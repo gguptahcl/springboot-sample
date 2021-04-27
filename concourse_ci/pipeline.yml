@@ -1,0 +1,39 @@
+resource_types:
+
+resources:
+  - name: spring-boot-sample
+    type: git
+    source:
+      uri: https://github.com/gguptahcl/springboot-concourse-ci.git
+      branch: master
+
+jobs:
+  - name: test
+    public: true
+    plan:
+      - get: spring-boot-sample
+        trigger: true
+      - task: mvn-test
+        file: "spring-boot-sample/concourse_ci/tasks/maven-test.yml"
+
+  - name: unit-tests
+    public: true
+    plan:
+     - get: spring-boot-sample
+       passed:
+         - test
+       trigger: true
+     - task: unit-testing
+       file: spring-boot-sample/concourse_ci/tasks/unittest.yml
+       
+  - name: sonar-scan
+    public: true
+    plan:
+    - get: spring-boot-sample
+      passed:
+        - test
+      trigger: true
+    - task: code-scan
+      file: spring-boot-sample/concourse_ci/tasks/sonarscan.yml
+      params:
+       login: ((sonarqube-login))
