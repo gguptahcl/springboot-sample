@@ -12,9 +12,9 @@ chmod +x ./mvnw
 echo "Present working directory is...."
 echo "$(pwd)"
 
-# ./mvnw test --s settings.xml -Dmaven.wagon.http.ssl.insecure=true -Dmaven.wagon.http.ssl.allowall=true -Dmaven.wagon.http.ssl.ignore.validity.dates=true
+./mvnw test --s settings.xml -Dmaven.wagon.http.ssl.insecure=true -Dmaven.wagon.http.ssl.allowall=true -Dmaven.wagon.http.ssl.ignore.validity.dates=true
 
-./mvnw clean test --s settings.xml
+#./mvnw clean --s settings.xml
 
 cp -R target/test spring-boot-sample-unit-test-output
 
