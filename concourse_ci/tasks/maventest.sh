@@ -28,4 +28,5 @@ cd test-results
 
 ls 
 
-cp -R ../target/test-results/test spring-boot-sample-unit-test-output
+cd spring-boot-sample
+cp -R target/test-results/test spring-boot-sample-unit-test-output
