@@ -20,4 +20,8 @@ echo "Present working director yat the end -----------...."
 
 ls -lt
 
+cd target
+
+ls -lt 
+
 cp -R target/test spring-boot-sample-unit-test-output
