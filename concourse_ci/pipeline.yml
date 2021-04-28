@@ -24,4 +24,4 @@ jobs:
               outputs:
                 - name: the-output
               run:
-                path: spring-boot-service/concourse_ci/tasks/sonarscan.sh
+                path: spring-boot-sample/concourse_ci/tasks/sonarscan.sh
