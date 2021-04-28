@@ -7,15 +7,16 @@ image_resource:
     repository: java
     tag: openjdk-8
 
-#inputs:
-#  - name: spring-boot-sample
-#  - name: spring-boot-sample-unit-test-output
-
-outputs:
-  - name: sonar-scan-output
+inputs:
+  - name: spring-boot-sample
+  - name: spring-boot-sample-unit-test-output
 
 run:
   path: /bin/sh
-  args: ["spring-boot-sample/concourse_ci/tasks/maventest.sh"]
+  args: ["spring-boot-sample/concourse_ci/tasks/sonarscan.sh"]
   
+ 
+outputs:
+  - name: sonar-scan-output
+
   
