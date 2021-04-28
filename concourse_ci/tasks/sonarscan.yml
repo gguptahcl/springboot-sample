@@ -9,7 +9,6 @@ image_resource:
 
 inputs:
   - name: spring-boot-sample
-  - name: spring-boot-sample-unit-test-output
 
 run:
   path: /bin/sh
