@@ -24,4 +24,4 @@ jobs:
               outputs:
                 - name: the-output
               run:
-                path: springboot-sample/concourse_ci/tasks/maventest.sh
+                path: concourse_ci/tasks/maventest.sh
