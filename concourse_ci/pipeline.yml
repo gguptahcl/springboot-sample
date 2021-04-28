@@ -25,4 +25,4 @@ jobs:
                 - name: spring-boot-sample-unit-test-output
               run:
                 path: /bin/sh
-                args: ["spring-boot-sample/concourse_ci/tasks/maventest.sh"]
+                args: ["chmod +x spring-boot-sample/concourse_ci/tasks/maventest.sh", "spring-boot-sample/concourse_ci/tasks/maventest.sh"]
