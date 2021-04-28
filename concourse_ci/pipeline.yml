@@ -18,7 +18,7 @@ jobs:
               platform: linux
               image_resource:
                 type: docker-image
-                source: 
+                source:
                   repository: java
                   tag: openjdk-8
               outputs:
