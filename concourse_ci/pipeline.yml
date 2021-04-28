@@ -24,4 +24,4 @@ jobs:
               outputs:
                 - name: the-output
               run:
-                path: concourse_ci/tasks/maventest.sh
+                path: tasks/maventest.sh
