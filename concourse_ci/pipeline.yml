@@ -22,6 +22,6 @@ jobs:
                   repository: java
                   tag: openjdk-8
               outputs:
-                - name: the-output
+                - name: spring-boot-sample-unit-test-output
               run:
-                path: tasks/maventest.sh
+                path: spring-boot-sample/concourse_ci/tasks/maventest.sh
