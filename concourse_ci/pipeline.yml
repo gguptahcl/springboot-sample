@@ -24,4 +24,4 @@ jobs:
               outputs:
                 - name: spring-boot-sample-unit-test-output
               run:
-                path: springboot-sample/concourse_ci/tasks/maventest.sh
+                path: "springboot-sample/concourse_ci/tasks/maventest.sh"
