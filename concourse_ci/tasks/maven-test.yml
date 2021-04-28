@@ -10,6 +10,11 @@ image_resource:
 inputs:
   - name: spring-boot-sample
 
+outputs:
+  - name: spring-boot-sample-unit-test-output
+#   path: spring-boot-sample
+
+
 #run:
 #  path: "mvn"
 #  args:
@@ -23,6 +28,3 @@ run:
   args: ["spring-boot-sample/concourse_ci/tasks/maventest.sh"]
   
   
-outputs:
-  - name: spring-boot-sample-unit-test-output
-#   path: spring-boot-sample

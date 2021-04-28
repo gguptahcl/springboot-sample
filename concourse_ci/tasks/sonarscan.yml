@@ -5,9 +5,9 @@ image_resource:
   type: docker-image
   source: {repository: java, tag: alpine}
 
-inputs:
-# - name: spring-boot-sample
-  - name: spring-boot-sample-unit-test-output
+#inputs:
+#  - name: spring-boot-sample
+#  - name: spring-boot-sample-unit-test-output
 
 outputs:
   - name: sonar-scan-output

@@ -28,6 +28,10 @@ jobs:
       file: spring-boot-sample/concourse_ci/tasks/sonarscan.yml
       params:
        login: ((sonarqube-login))
+      inputs:
+       - name: spring-boot-sample
+       - name: spring-boot-sample-unit-test-output
+       
        
   - name: package
     public: true
