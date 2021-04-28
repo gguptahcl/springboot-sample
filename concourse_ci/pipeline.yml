@@ -14,15 +14,29 @@ jobs:
       - get: spring-boot-sample
         trigger: true
       - task: mvn-test
-        config:
-              platform: linux
-              image_resource:
-                type: docker-image
-                source:
-                  repository: java
-                  tag: openjdk-8
-              outputs:
-                - name: spring-boot-sample-unit-test-output
-              run:
-                path: /bin/bash
-                args: ["chmod +x spring-boot-sample/concourse_ci/tasks/maventest.sh", "spring-boot-sample/concourse_ci/tasks/maventest.sh"]
+        file: "spring-boot-sample/concourse_ci/tasks/maven-test.yml"
+
+     
+  - name: sonar-scan
+    public: true
+    plan:
+    - get: spring-boot-sample
+      passed:
+        - unit-tests
+      trigger: true
+    - task: code-scan
+      file: spring-boot-sample/concourse_ci/tasks/sonarscan.yml
+      params:
+       login: ((sonarqube-login))
+       
+       
+  - name: package
+    public: true
+    plan:
+    - get: spring-boot-sample
+      passed:
+        - sonar-scan
+      trigger: true
+    - task: package
+      file: spring-boot-sample/concourse_ci/tasks/maven-package.yml
+ 
