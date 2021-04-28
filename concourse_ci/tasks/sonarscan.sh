@@ -8,6 +8,8 @@ echo "git url is... "
 echo "${git_repo_url}"
 echo "$(pwd)"
 
+ls -lt
+
 
 cd spring-boot-sample
 dir=$(pwd -P)
